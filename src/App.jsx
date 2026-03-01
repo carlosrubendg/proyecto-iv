@@ -2,94 +2,131 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
-// Componente de Navegación (Menú Principal)
+// Componente de Navegación Profesional
 const Navbar = () => (
   <nav className="navbar">
-    <div className="logo">ModaLocalMX 👗</div>
-    <ul className="nav-links">
-      <li><Link to="/">Inicio</Link></li>
-      <li><Link to="/nosotros">¿Quiénes Somos?</Link></li>
-      <li><Link to="/politicas">Políticas</Link></li>
-      <li><Link to="/admin">Acceso Asesor</Link></li>
-    </ul>
+    <div className="nav-container">
+      <div className="logo-brand">
+        <span className="logo-emoji">👗</span>
+        <div className="logo-text">
+          <span className="main-title">ModaLocalMX</span>
+          <span className="sub-title">Proyecto IV</span>
+        </div>
+      </div>
+      <ul className="nav-links">
+        <li><Link to="/">Inicio</Link></li>
+        <li><Link to="/nosotros">Nosotros</Link></li>
+        <li><Link to="/politicas">Calidad</Link></li>
+        <li><Link to="/admin" className="btn-admin">Acceso</Link></li>
+      </ul>
+    </div>
   </nav>
 );
 
-// Páginas del Proyecto
+// Sección Inicio (Hero Section)
 const Home = () => (
-  <div className="page">
-    <h1>Bienvenidos a ModaLocalMX</h1>
-    <p>Conectando el talento de productores locales con el mundo digital[cite: 52].</p>
-    <div className="hero-placeholder">
-      <img src="https://via.placeholder.com/800x400" alt="Logo de sitio" />
+  <header className="hero">
+    <div className="hero-content">
+      <h1>Impulsando el Talento Local</h1>
+      <p>La plataforma digital diseñada para conectar a los productores de moda mexicana con el mercado moderno.</p>
+      <div className="hero-buttons">
+        <Link to="/nosotros" className="btn-primary">Conoce nuestro plan</Link>
+      </div>
+    </div>
+  </header>
+);
+
+// Sección Nosotros (Misión, Visión y Ubicación)
+const Nosotros = () => (
+  <div className="container section-padding">
+    <h2 className="section-title">Nuestra Identidad</h2>
+    <div className="grid-cards">
+      <div className="card">
+        <div className="card-icon">🎯</div>
+        <h3>Misión</h3>
+        <p>Impulsar la economía local brindando una plataforma digital eficiente a los productores de moda mexicana para su profesionalización.</p>
+      </div>
+      <div className="card">
+        <div className="card-icon">🚀</div>
+        <h3>Visión</h3>
+        <p>Ser el referente principal para el consumo de moda local y sostenible en la región para el año 2027.</p>
+      </div>
     </div>
   </div>
 );
 
-const Nosotros = () => (
-  <div className="page">
-    <h2>Nuestra Identidad</h2>
-    <section>
-      <h3>Misión</h3>
-      <p>Impulsar la economía local brindando una plataforma digital a los productores de moda mexicana[cite: 52].</p>
-    </section>
-    <section>
-      <h3>Visión</h3>
-      <p>Ser el referente principal para el consumo de moda local y sostenible en la región para 2027.</p>
-    </section>
-    <section>
-      <h3>Ubicación Física</h3>
-      <p>Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI), Guadalajara, Jalisco[cite: 1, 119].</p>
-    </section>
-  </div>
-);
-
+// Sección de Políticas de Calidad
 const Politicas = () => (
-  <div className="page">
-    <h2>Políticas de Calidad</h2>
-    <ul>
-      <li>Garantizar que cada producto listado sea de origen local.</li>
-      <li>Mantener una interfaz intuitiva para productores y consumidores[cite: 52].</li>
-      <li>Seguridad en la gestión de datos de usuario.</li>
-    </ul>
+  <div className="container section-padding">
+    <h2 className="section-title">Compromiso de Calidad</h2>
+    <div className="policy-list">
+      <div className="policy-item">
+        <strong>01. Autenticidad Local:</strong> Garantizamos que cada producto listado sea de origen y manufactura nacional.
+      </div>
+      <div className="policy-item">
+        <strong>02. Experiencia de Usuario:</strong> Mantenemos una interfaz intuitiva tanto para productores como para consumidores.
+      </div>
+      <div className="policy-item">
+        <strong>03. Seguridad de Datos:</strong> Implementamos protocolos de protección para la gestión segura de información.
+      </div>
+    </div>
   </div>
 );
 
-// Sección solicitada: Datos de Administrador para la Asesora
+// Panel de Administración
 const AdminAccess = () => (
-  <div className="page admin-card">
-    <h2>Panel de Administración (Simulado)</h2>
-    <p>Acceso exclusivo para la docente **Rosalía Iñiguez Barajas** [cite: 15, 128] y el equipo.</p>
-    <table className="admin-table">
-      <thead>
-        <tr>
-          <th>Rol</th>
-          <th>Usuario (Email)</th>
-          <th>Clave Temporal</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Asesora</td>
-          <td>rosalia.iniguez@docente.udg.mx</td>
-          <td><code>Proyecto4_2026</code></td>
-        </tr>
-        <tr>
-          <td>Equipo (General)</td>
-          <td>equipo4@alumnos.udg.mx</td>
-          <td><code>ModaLocal2026</code></td>
-        </tr>
-      </tbody>
-    </table>
+  <div className="container section-padding">
+    <div className="admin-card-container">
+      <h2 className="section-title">Gestión de Usuarios Administrativos</h2>
+      <p className="admin-intro">Panel habilitado para la docente y los integrantes del equipo Scrum de ModaLocalMX.</p>
+      <div className="table-responsive">
+        <table className="admin-table">
+          <thead>
+            <tr>
+              <th>Rol / Integrante</th>
+              <th>Usuario de Acceso</th>
+              <th>Permisos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Asesora:</strong> Rosalía Iñiguez</td>
+              <td><code>docente_proyectiv@udg.mx</code></td>
+              <td>Super Admin</td>
+            </tr>
+            <tr>
+              <td><strong>P.O:</strong> Mercedes Ballesteros</td>
+              <td><code>mercedes.ballesteros@alumnos.udg.mx</code></td>
+              <td>Gestor Backlog</td>
+            </tr>
+            <tr>
+              <td><strong>S.M:</strong> Fernando Ávalos</td>
+              <td><code>fernando.avalos@alumnos.udg.mx</code></td>
+              <td>Facilitador</td>
+            </tr>
+            <tr>
+              <td><strong>Dev:</strong> Víctor de la Cruz</td>
+              <td><code>victor.cruz@alumnos.udg.mx</code></td>
+              <td>Desarrollador</td>
+            </tr>
+            <tr>
+              <td><strong>Dev:</strong> Carlos Díaz</td>
+              <td><code>carlos.diaz@alumnos.udg.mx</code></td>
+              <td>Desarrollador</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 );
 
 function App() {
   return (
-    <Router basename="/proyecto-iv"> {/* Cambia esto por el nombre de tu repo */}
+    <Router basename="/proyecto-iv">
       <div className="App">
         <Navbar />
-        <main className="content">
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/nosotros" element={<Nosotros />} />
@@ -98,7 +135,10 @@ function App() {
           </Routes>
         </main>
         <footer className="footer">
-          <p>© 2026 ModaLocalMX - Integrantes: Mercedes, Fernando, Víctor y Carlos[cite: 13, 131].</p>
+          <div className="footer-content">
+            <p>© 2026 ModaLocalMX | Universidad de Guadalajara - CUCEI </p>
+            <p className="footer-names">Mercedes B. | Fernando A. | Víctor C. | Carlos D.</p>
+          </div>
         </footer>
       </div>
     </Router>
