@@ -86,7 +86,7 @@ const AdminAccess = () => (
 
 function App() {
   return (
-    <Router basename="/nombre-de-tu-repo"> {/* Cambia esto por el nombre de tu repo */}
+    <Router basename="/proyecto-iv"> {/* Cambia esto por el nombre de tu repo */}
       <div className="App">
         <Navbar />
         <main className="content">
