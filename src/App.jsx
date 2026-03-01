@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
@@ -66,59 +66,40 @@ const Politicas = () => (
   </div>
 );
 
-const AdminAccess = () => (
-  <div className="container section-padding">
-    <div className="admin-card-container">
-      <h2 className="section-title">Gestión de Usuarios Administrativos</h2>
-      <p className="admin-intro">Panel habilitado para la docente y los integrantes del equipo Scrum de ModaLocalMX.</p>
-      <div className="table-responsive">
-        <table className="admin-table">
-          <thead>
-            <tr>
-              <th>Rol / Integrante</th>
-              <th>Usuario de Acceso</th>
-              <th>Permisos</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Asesora:</strong> Rosalía Iñiguez</td>
-              <td><code>docente_proyectiv@udg.mx</code></td>
-              <td>Super Admin</td>
-            </tr>
-            <tr>
-              <td><strong>P.O:</strong> Mercedes Ballesteros</td>
-              <td><code>mercedes.ballesteros@alumnos.udg.mx</code></td>
-              <td>Gestor Backlog</td>
-            </tr>
-            <tr>
-              <td><strong>S.M:</strong> Fernando Ávalos</td>
-              <td><code>fernando.avalos@alumnos.udg.mx</code></td>
-              <td>Facilitador</td>
-            </tr>
-            <tr>
-              <td><strong>Dev:</strong> Victor de la Cruz</td>
-              <td><code>victor.cruz@alumnos.udg.mx</code></td>
-              <td>Desarrollador</td>
-            </tr>
-            <tr>
-              <td><strong>Dev:</strong> Carlos Díaz</td>
-              <td><code>carlos.diaz@alumnos.udg.mx</code></td>
-              <td>Desarrollador</td>
-            </tr>
-          </tbody>
-        </table>
+// Rediseño de Acceso como Formulario de Login
+const AdminAccess = () => {
+  return (
+    <div className="login-container">
+      <div className="login-box">
+        <h2>Acceso Administrativo</h2>
+        <p className="login-subtitle">Inicie sesión para gestionar el Product Backlog</p>
+        <form className="login-form" onSubmit={(e) => e.preventDefault()}>
+          <div className="form-group">
+            <label>Correo electrónico</label>
+            <input type="email" placeholder="ejemplo@alumnos.udg.mx" />
+          </div>
+          <div className="form-group">
+            <label>Contraseña</label>
+            <input type="password" placeholder="********" />
+          </div>
+          <button type="submit" className="btn-login">Entrar</button>
+        </form>
+        <div className="admin-help">
+          <p><strong>Nota para la evaluación:</strong></p>
+          <p>Docente: <code>docente_proyectiv@udg.mx</code></p>
+          <p>Clave: <code>Proyecto4_2026</code></p>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 function App() {
   return (
     <Router basename="/proyecto-iv">
       <div className="App">
         <Navbar />
-        <main>
+        <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/nosotros" element={<Nosotros />} />
@@ -129,7 +110,9 @@ function App() {
         <footer className="footer">
           <div className="footer-content">
             <p>© 2026 ModaLocalMX | Universidad de Guadalajara</p>
-            <p className="footer-names">Mercedes Ballesteros | Fernando Ávalos | Victor de la Cruz | Carlos Díaz</p>
+            <p className="footer-names">
+              Mercedes Ballesteros | Fernando Ávalos | Victor de la Cruz | Carlos Díaz
+            </p>
           </div>
         </footer>
       </div>
