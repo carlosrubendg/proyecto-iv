@@ -2,12 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
-// Componente de Navegación Profesional
 const Navbar = () => (
   <nav className="navbar">
     <div className="nav-container">
       <div className="logo-brand">
-        <span className="logo-emoji">👗</span>
         <div className="logo-text">
           <span className="main-title">ModaLocalMX</span>
           <span className="sub-title">Proyecto IV</span>
@@ -23,7 +21,6 @@ const Navbar = () => (
   </nav>
 );
 
-// Sección Inicio (Hero Section)
 const Home = () => (
   <header className="hero">
     <div className="hero-content">
@@ -36,18 +33,15 @@ const Home = () => (
   </header>
 );
 
-// Sección Nosotros (Misión, Visión y Ubicación)
 const Nosotros = () => (
   <div className="container section-padding">
     <h2 className="section-title">Nuestra Identidad</h2>
     <div className="grid-cards">
       <div className="card">
-        <div className="card-icon">🎯</div>
         <h3>Misión</h3>
         <p>Impulsar la economía local brindando una plataforma digital eficiente a los productores de moda mexicana para su profesionalización.</p>
       </div>
       <div className="card">
-        <div className="card-icon">🚀</div>
         <h3>Visión</h3>
         <p>Ser el referente principal para el consumo de moda local y sostenible en la región para el año 2027.</p>
       </div>
@@ -55,7 +49,6 @@ const Nosotros = () => (
   </div>
 );
 
-// Sección de Políticas de Calidad
 const Politicas = () => (
   <div className="container section-padding">
     <h2 className="section-title">Compromiso de Calidad</h2>
@@ -73,7 +66,6 @@ const Politicas = () => (
   </div>
 );
 
-// Panel de Administración
 const AdminAccess = () => (
   <div className="container section-padding">
     <div className="admin-card-container">
@@ -105,7 +97,7 @@ const AdminAccess = () => (
               <td>Facilitador</td>
             </tr>
             <tr>
-              <td><strong>Dev:</strong> Víctor de la Cruz</td>
+              <td><strong>Dev:</strong> Victor de la Cruz</td>
               <td><code>victor.cruz@alumnos.udg.mx</code></td>
               <td>Desarrollador</td>
             </tr>
@@ -136,8 +128,8 @@ function App() {
         </main>
         <footer className="footer">
           <div className="footer-content">
-            <p>© 2026 ModaLocalMX | Universidad de Guadalajara - CUCEI </p>
-            <p className="footer-names">Mercedes B. | Fernando A. | Víctor C. | Carlos D.</p>
+            <p>© 2026 ModaLocalMX | Universidad de Guadalajara</p>
+            <p className="footer-names">Mercedes Ballesteros | Fernando Ávalos | Victor de la Cruz | Carlos Díaz</p>
           </div>
         </footer>
       </div>

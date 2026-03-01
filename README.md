@@ -1,16 +1,32 @@
-# React + Vite
+# ModaLocalMX - Proyecto IV
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema web orientado a la gestion y conexion de productores locales de moda mexicana. Este proyecto forma parte de la Licenciatura en Desarrollo de Sistemas Web de la Universidad de Guadalajara.
 
-Currently, two official plugins are available:
+## Informacion General
+- Institucion: Universidad de Guadalajara (CUCEI)
+- Materia: Proyecto IV
+- Unidad: 2 - Primeros pasos con CMS o Frameworks
+- Docente: Rosalia Iñiguez Barajas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Equipo Scrum
+- Product Owner: Mercedes Ballesteros
+- Scrum Master: Fernando Avalos
+- Desarrollo: Victor de la Cruz
+- Desarrollo: Carlos Diaz
 
-## React Compiler
+## Especificaciones Tecnicas
+- Framework: React (Vite)
+- Hosting: GitHub Pages
+- Estructura: Desarrollo basado en componentes funcionales
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Avances del Sprint 2
+- Configuracion del entorno de desarrollo y despliegue continuo.
+- Implementacion de identidad visual del sitio (logo y tema responsivo).
+- Creacion de paginas institucionales: Mision, Vision y Politicas de Calidad.
+- Gestion de perfiles administrativos para asesoria y equipo tecnico.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Instalacion
+1. Clonar el repositorio.
+2. Ejecutar npm install para instalar dependencias.
+3. Ejecutar npm run dev para iniciar el entorno local.
+4. Ejecutar npm run deploy para actualizar el sitio en vivo.
