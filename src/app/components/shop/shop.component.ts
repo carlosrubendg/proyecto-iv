@@ -1,5 +1,5 @@
-// shop.component.ts
 import { Component } from '@angular/core';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-shop',
@@ -28,7 +28,21 @@ export class ShopComponent {
     }
   ];
 
+  // Variables para controlar el feedback visual
+  mostrarMensaje = false;
+  productoAgregado = '';
+
+  // Inyectamos el servicio del carrito
+  constructor(private cartService: CartService) {}
+
   agregarAlCarrito(producto: any) {
-    alert(`Producto "${producto.nombre}" añadido al carrito`);
+    this.cartService.agregarAlCarrito(producto);
+
+    this.productoAgregado = producto.nombre;
+    this.mostrarMensaje = true;
+
+    setTimeout(() => {
+      this.mostrarMensaje = false;
+    }, 2500);
   }
 }

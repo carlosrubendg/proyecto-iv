@@ -1,5 +1,24 @@
+/* Estilos para la sección hero */
+.hero-section a {
+  text-decoration: none;
+}
+
 /* Estilos para la sección del slider */
 .slider-section {
   padding: 0;
   background-color: #f5f5f5;
+}
+
+/* Estilos para el contenedor del mapa */
+.map-container {
+  margin-top: 4rem; /* Separación entre el formulario y el mapa */
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden; /* Asegura que el iframe respete los bordes redondeados */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 204, 0, 0.2); /* Sutil borde amarillo Tecnoyorsh */
+}
+
+.map-container iframe {
+  display: block; /* Evita un pequeño margen blanco que los navegadores ponen por defecto debajo de los iframes */
 }

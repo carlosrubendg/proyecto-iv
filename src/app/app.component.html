@@ -6,11 +6,18 @@
     </div>
     <nav class="nav-menu">
       <ul>
-        <li><a routerLink="/">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a routerLink="/" fragment="hero">Inicio</a></li>
+        <li><a routerLink="/" fragment="servicios">Servicios</a></li>
+        <li><a routerLink="/" fragment="nosotros">Nosotros</a></li>
+        <li><a routerLink="/" fragment="acceso">Portal</a></li>
+        <li><a routerLink="/" fragment="contacto">Contacto</a></li>
         <li><a routerLink="/tienda">Tienda</a></li>
+        <li>
+          <a routerLink="/carrito" class="cart-link">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge">{{ cartCount }}</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -37,17 +44,41 @@
         <p>Sábado: 10:00 - 14:00</p>
         <p>Domingo: Cerrado</p>
       </div>
-      <div class="social-media-full">
-        <a href="https://facebook.com/" target="_blank" class="social-icon-large facebook">
+      <div
+        class="social-media-full"
+        style="
+          justify-content: flex-start;
+          background-color: transparent;
+          padding: 1rem 0;
+          gap: 1rem;
+        "
+      >
+        <a
+          href="https://facebook.com/tecnoyorsh"
+          target="_blank"
+          class="social-icon-large facebook"
+        >
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://instagram.com/" target="_blank" class="social-icon-large instagram">
+        <a
+          href="https://instagram.com/tecnoyorsh"
+          target="_blank"
+          class="social-icon-large instagram"
+        >
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://twitter.com/" target="_blank" class="social-icon-large twitter">
+        <a
+          href="https://twitter.com/tecnoyorsh"
+          target="_blank"
+          class="social-icon-large twitter"
+        >
           <i class="fab fa-twitter"></i>
         </a>
-        <a href="https://wa.me/" target="_blank" class="social-icon-large whatsapp">
+        <a
+          href="https://wa.me/+521234567890"
+          target="_blank"
+          class="social-icon-large whatsapp"
+        >
           <i class="fab fa-whatsapp"></i>
         </a>
       </div>

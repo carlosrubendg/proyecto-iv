@@ -1,10 +1,11 @@
-<!-- app.component.html -->
 <div class="main-container">
   <section id="hero" class="hero-section">
     <div class="hero-content">
       <h2>Tu celular en buenas manos</h2>
       <p>Reparaciones profesionales con garantía</p>
-      <button class="btn-primary">Solicitar servicio</button>
+      <a href="https://wa.me/+523333333333" target="_blank" class="btn-primary"
+        >Solicitar servicio</a
+      >
     </div>
   </section>
 
@@ -62,21 +63,44 @@
     <div class="about-grid">
       <div class="about-card">
         <h3>Misión</h3>
-        <p>"Brindar soluciones rápidas, confiables y accesibles para la reparación de dispositivos móviles, ofreciendo un servicio personalizado y de alta calidad que garantice la satisfacción de nuestros clientes y prolongue la vida útil de sus equipos."</p>
+        <p>
+          "Brindar soluciones rápidas, confiables y accesibles para la
+          reparación de dispositivos móviles, ofreciendo un servicio
+          personalizado y de alta calidad que garantice la satisfacción de
+          nuestros clientes y prolongue la vida útil de sus equipos."
+        </p>
       </div>
 
       <div class="about-card">
         <h3>Visión</h3>
-        <p>"Ser reconocidos como la opción líder en reparación de celulares en nuestra comunidad, destacándonos por nuestra innovación, compromiso con el cliente y excelencia en el servicio, contribuyendo a un mundo donde la tecnología sea sostenible y accesible para todos."</p>
+        <p>
+          "Ser reconocidos como la opción líder en reparación de celulares en
+          nuestra comunidad, destacándonos por nuestra innovación, compromiso
+          con el cliente y excelencia en el servicio, contribuyendo a un mundo
+          donde la tecnología sea sostenible y accesible para todos."
+        </p>
       </div>
 
       <div class="about-card">
         <h3>Valores</h3>
         <ul class="values-list">
-          <li><strong>Calidad:</strong> Garantizar reparaciones duraderas y eficientes utilizando piezas y técnicas de alta calidad.</li>
-          <li><strong>Confianza:</strong> Ofrecer transparencia en los diagnósticos, precios y procesos para generar confianza en nuestros clientes.</li>
-          <li><strong>Innovación:</strong> Mantenernos actualizados con las últimas tecnologías y métodos de reparación.</li>
-          <li><strong>Servicio al cliente:</strong> Priorizar la satisfacción del cliente con atención personalizada y soluciones rápidas.</li>
+          <li>
+            <strong>Calidad:</strong> Garantizar reparaciones duraderas y
+            eficientes utilizando piezas y técnicas de alta calidad.
+          </li>
+          <li>
+            <strong>Confianza:</strong> Ofrecer transparencia en los
+            diagnósticos, precios y procesos para generar confianza en nuestros
+            clientes.
+          </li>
+          <li>
+            <strong>Innovación:</strong> Mantenernos actualizados con las
+            últimas tecnologías y métodos de reparación.
+          </li>
+          <li>
+            <strong>Servicio al cliente:</strong> Priorizar la satisfacción del
+            cliente con atención personalizada y soluciones rápidas.
+          </li>
         </ul>
       </div>
     </div>
@@ -85,6 +109,37 @@
   <section class="multimedia-section">
     <app-video-embed></app-video-embed>
     <app-image-gallery></app-image-gallery>
+  </section>
+
+  <!-- SECCIÓN DE AUTENTICACIÓN -->
+  <section id="acceso" class="auth-section">
+    <div
+      class="auth-container"
+      style="
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: rgba(10, 10, 10, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 2.5rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 204, 0, 0.15);
+        text-align: center;
+      "
+    >
+      <div style="margin-bottom: 2rem">
+        <h2 style="color: #ffcc00; margin-top: 0; font-size: 2rem">
+          Portal de Clientes
+        </h2>
+        <p style="color: #ffffff; font-size: 1.1rem">
+          Inicia sesión para revisar el estado de tu equipo o historial de
+          compras.
+        </p>
+      </div>
+
+      <app-auth></app-auth>
+    </div>
   </section>
 
   <section id="contacto" class="contact-section">
@@ -96,10 +151,6 @@
     <div class="contact-container">
       <div class="contact-info">
         <div class="info-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <p>Dirección del local, Ciudad, Estado</p>
-        </div>
-        <div class="info-item">
           <i class="fas fa-phone"></i>
           <p>+52 123 456 7890</p>
         </div>
@@ -107,15 +158,159 @@
           <i class="fas fa-envelope"></i>
           <p>contacto@tecnoyorsh.com</p>
         </div>
-        <div class="social-media">
-          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Dirección del local #123-4, 12345. Guadalajara, Jalisco.</p>
+        </div>
+
+        <div
+          class="social-media-full"
+          style="
+            justify-content: flex-start;
+            background-color: transparent;
+            padding: 1rem 0;
+            gap: 1rem;
+          "
+        >
+          <a
+            href="https://facebook.com/tecnoyorsh"
+            target="_blank"
+            class="social-icon-large facebook"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://instagram.com/tecnoyorsh"
+            target="_blank"
+            class="social-icon-large instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://twitter.com/tecnoyorsh"
+            target="_blank"
+            class="social-icon-large twitter"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://wa.me/+521234567890"
+            target="_blank"
+            class="social-icon-large whatsapp"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <div
+          class="map-container"
+          style="
+            margin-top: 1.5rem;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 204, 0, 0.2);
+          "
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119452.50904055213!2d-103.41779948809956!3d20.674016842522626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b18cb52fd39b%3A0xd63d9302bf865750!2sGuadalajara%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1777672285283!5m2!1ses-419!2smx"
+            width="100%"
+            height="250"
+            style="border: 0; display: block"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
 
-      <div class="contact-form">
-        <app-auth></app-auth>
+      <div
+        class="contact-form"
+        style="display: flex; flex-direction: column; height: 100%"
+      >
+        <h3 style="color: #ffffff; margin-top: 0">Envíanos un mensaje</h3>
+
+        <div
+          *ngIf="mensajeEnviado"
+          style="
+            background-color: #25d366;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: bold;
+            animation: fadeIn 0.3s ease-in-out;
+          "
+        >
+          <i class="fas fa-check-circle" style="margin-right: 8px"></i> ¡Mensaje
+          enviado con éxito!
+        </div>
+
+        <form
+          (submit)="enviarMensaje($event)"
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-grow: 1;
+          "
+        >
+          <input
+            type="text"
+            placeholder="Nombre"
+            style="
+              padding: 0.8rem;
+              border-radius: 5px;
+              border: 1px solid #ccc;
+              width: 100%;
+              box-sizing: border-box;
+            "
+            required
+          />
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            style="
+              padding: 0.8rem;
+              border-radius: 5px;
+              border: 1px solid #ccc;
+              width: 100%;
+              box-sizing: border-box;
+            "
+            required
+          />
+
+          <textarea
+            placeholder="¿En qué te podemos ayudar?"
+            style="
+              padding: 0.8rem;
+              border-radius: 5px;
+              border: 1px solid #ccc;
+              width: 100%;
+              box-sizing: border-box;
+              resize: none;
+              flex-grow: 1;
+            "
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            class="btn-primary"
+            style="
+              padding: 0.8rem;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              margin-top: auto;
+            "
+          >
+            Enviar mensaje
+          </button>
+        </form>
       </div>
     </div>
   </section>

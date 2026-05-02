@@ -11,6 +11,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-image: url(celulares.jpg);
@@ -30,7 +35,7 @@ body {
 
 /* Encabezado y navegación */
 .header {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 1);
   padding: 1rem 5%;
   display: flex;
   justify-content: space-between;
@@ -57,7 +62,7 @@ body {
 .nav-menu ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .nav-menu a {
@@ -74,7 +79,7 @@ body {
 
 /* Sección hero */
 .hero-section {
-  height: 80vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,13 +108,12 @@ body {
 
 .hero-content h2 {
   font-size: 3rem;
-  margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
   font-size: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .btn-primary {
@@ -143,7 +147,6 @@ section {
 .section-header h2 {
   font-size: 2.5rem;
   color: #fff;
-  margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -155,6 +158,7 @@ section {
 /* Sección de servicios */
 .services-section {
   background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 0;
 }
 
 .services-grid {
@@ -168,7 +172,9 @@ section {
   border-radius: 10px;
   padding: 2rem;
   text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .service-card:hover {
@@ -194,6 +200,7 @@ section {
 /* Sección sobre nosotros */
 .about-section {
   background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 0;
 }
 
 .about-grid {
@@ -244,6 +251,10 @@ section {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.contact-section a {
+  text-decoration: none;
+}
+
 .contact-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -292,7 +303,7 @@ section {
 
 /* Footer */
 .footer {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 1);
   padding: 3rem 5% 1rem;
   margin-top: auto;
 }
@@ -382,4 +393,92 @@ section {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 2rem;
+}
+
+/* Estilos para redes sociales en footer */
+.social-media-full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.social-icon-large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  min-width: 60px; /* Refuerza el ancho mínimo */
+  flex-shrink: 0; /* Evita que el contenedor flex aplaste el círculo volviéndolo óvalo */
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #ffcc00;
+  color: #ffcc00;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.social-icon-large i {
+  font-size: 1.5rem;
+}
+
+.social-icon-large:hover {
+  background-color: #ffcc00;
+  color: #333;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+}
+
+/* Variaciones de color para cada red social */
+.social-icon-large.facebook:hover {
+  background-color: #3b5998;
+  border-color: #3b5998;
+  color: white;
+}
+
+.social-icon-large.instagram:hover {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  border-color: transparent;
+  color: white;
+}
+
+.social-icon-large.whatsapp:hover {
+  background-color: #25d366;
+  border-color: #25d366;
+  color: white;
+}
+
+.social-icon-large.twitter:hover {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .social-media-full {
+    gap: 1rem;
+  }
+
+  .social-icon-large {
+    width: 50px;
+    height: 50px;
+    min-width: 50px; /* Mantiene el refuerzo en móviles */
+  }
+
+  .social-icon-large i {
+    font-size: 1.2rem;
+  }
 }

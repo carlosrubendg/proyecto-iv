@@ -12,10 +12,12 @@ import { ImageSliderComponent } from './components/image-slider/image-slider.com
 import { ImageGalleryComponent } from './components/image-gallery/image-gallery.component';
 import { VideoEmbedComponent } from './components/video-embed/video-embed.component';
 import { ShopComponent } from './components/shop/shop.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'tienda', component: ShopComponent }
+  { path: 'tienda', component: ShopComponent },
+  { path: 'carrito', component: CartComponent }
 ];
 
 @NgModule({
@@ -28,12 +30,17 @@ const routes: Routes = [
     ImageSliderComponent,
     ImageGalleryComponent,
     VideoEmbedComponent,
-    ShopComponent
+    ShopComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {
+      anchorScrolling: 'enabled',
+      scrollOffset: [0, 90],
+      scrollPositionRestoration: 'enabled'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

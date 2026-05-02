@@ -1,0 +1,39 @@
+<div class="cart-container">
+  <h2>Tu Carrito de Compras</h2>
+
+  <div *ngIf="(items$ | async)?.length === 0" class="empty-cart">
+    <p>El carrito está vacío.</p>
+    <button routerLink="/tienda" class="btn-primary">Ir a la tienda</button>
+  </div>
+
+  <div *ngIf="items$ | async as items">
+    <div class="cart-grid" *ngIf="items.length > 0">
+      <div class="cart-items">
+        <div class="cart-item" *ngFor="let item of items">
+          <img [src]="item.imagen" [alt]="item.nombre" />
+          <div class="item-details">
+            <h3>{{ item.nombre }}</h3>
+            <p>Cantidad: {{ item.cantidad }}</p>
+            <p class="item-price">
+              ${{ item.precio * item.cantidad! | number: "1.2-2" }}
+            </p>
+          </div>
+          <button class="btn-remove" (click)="eliminar(item.nombre)">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <h3>Resumen</h3>
+        <div class="summary-row">
+          <span>Total:</span>
+          <span class="total-amount">${{ total | number: "1.2-2" }}</span>
+        </div>
+        <button class="btn-checkout" (click)="finalizarCompra()">
+          Finalizar Compra
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

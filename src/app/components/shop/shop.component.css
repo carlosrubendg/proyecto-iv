@@ -31,7 +31,9 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .product-card:hover {
@@ -97,12 +99,37 @@
   .shop-container {
     padding: 1rem;
   }
-  
+
   .shop-header {
     padding: 1.5rem;
   }
-  
+
   .products-container {
     grid-template-columns: 1fr;
+  }
+}
+
+.toast-feedback {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffcc00;
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
