@@ -1,0 +1,42 @@
+<div class="checkout-container">
+  <div class="checkout-glass">
+    <h2 class="title">Finalizar Pedido</h2>
+    <p class="subtitle">Ingresa tus datos para procesar el envío y pago</p>
+
+    <form (submit)="procesarPago($event)" class="checkout-form">
+      
+      <div class="form-section">
+        <h3><i class="fas fa-map-marked-alt"></i> Datos de Envío</h3>
+        <div class="input-group">
+          <input type="text" placeholder="Nombre completo" required>
+          <input type="tel" placeholder="Teléfono" required>
+        </div>
+        <input type="text" placeholder="Dirección completa (Calle, Número, Colonia)" required class="full-width">
+        <div class="input-group">
+          <input type="text" placeholder="Ciudad" required>
+          <input type="text" placeholder="Código Postal" required>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3><i class="fas fa-credit-card"></i> Método de Pago</h3>
+        <input type="text" placeholder="Nombre en la tarjeta" required class="full-width">
+        <input type="text" placeholder="Número de Tarjeta (16 dígitos)" maxlength="16" required class="full-width">
+        <div class="input-group">
+          <input type="text" placeholder="MM/AA" maxlength="5" required>
+          <input type="password" placeholder="CVV" maxlength="3" required>
+        </div>
+      </div>
+
+      <div class="order-summary">
+        <h3>Total a pagar: <span class="highlight">${{ total | number:'1.2-2' }}</span></h3>
+        <button type="submit" class="btn-primary full-width">Confirmar y Pagar</button>
+      </div>
+
+      <div *ngIf="pagoExitoso" class="success-alert">
+        <i class="fas fa-check-circle"></i> ¡Pago procesado! Tu pedido #{{ numeroPedido }} ha sido registrado con éxito. Redirigiendo...
+      </div>
+
+    </form>
+  </div>
+</div>

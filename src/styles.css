@@ -244,6 +244,7 @@ section {
 /* Sección multimedia */
 .multimedia-section {
   background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 0;
 }
 
 /* Sección de contacto */

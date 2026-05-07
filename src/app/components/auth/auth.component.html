@@ -1,6 +1,4 @@
-<!-- auth.component.html -->
 <div class="auth-container">
-  <!-- Sección para usuario logueado -->
   <div class="user-welcome" *ngIf="usuarioLogueado">
     <div class="welcome-content">
       <div class="user-info">
@@ -14,18 +12,37 @@
     </div>
   </div>
 
-  <!-- Formulario de login -->
   <div class="auth-form-container" *ngIf="!usuarioLogueado">
     <div class="auth-form">
-      <h3>Iniciar Sesión</h3>
-      <p>Accede a tu cuenta para gestionar tus dispositivos.</p>
+      <div
+        *ngIf="mensajeExito"
+        style="
+          background-color: #25d366;
+          color: white;
+          padding: 1rem;
+          border-radius: 5px;
+          margin-bottom: 1.5rem;
+          text-align: center;
+          font-weight: bold;
+          animation: fadeIn 0.3s ease-in-out;
+        "
+      >
+        <i class="fas fa-check-circle"></i> {{ mensajeExito }}
+      </div>
 
-      <form (submit)="login()">
+      <h3 *ngIf="isLoginMode">Iniciar Sesión</h3>
+      <p *ngIf="isLoginMode">
+        Accede a tu cuenta para gestionar tus dispositivos.
+      </p>
+
+      <h3 *ngIf="!isLoginMode">Crear Cuenta</h3>
+      <p *ngIf="!isLoginMode">
+        Regístrate para solicitar servicios y comprar en línea.
+      </p>
+
+      <form (submit)="login()" *ngIf="isLoginMode">
         <div class="form-group">
-          <label for="usuario">
-            <i class="fas fa-user"></i>
-            Usuario
-          </label>
+          <label for="usuario"><i class="fas fa-user"></i> Usuario</label>
           <input
             type="text"
             id="usuario"
@@ -37,10 +54,7 @@
         </div>
 
         <div class="form-group">
-          <label for="password">
-            <i class="fas fa-lock"></i>
-            Contraseña
-          </label>
+          <label for="password"><i class="fas fa-lock"></i> Contraseña</label>
           <input
             type="password"
             id="password"
@@ -52,17 +66,86 @@
         </div>
 
         <div class="form-actions">
-          <button type="submit" class="btn-login">
-            <i class="fas fa-sign-in-alt"></i>
-            Iniciar Sesión
-          </button>
           <button
             type="button"
             class="btn-register"
             (click)="toggleFormulario()"
           >
-            <i class="fas fa-user-plus"></i>
-            Registrarse
+            <i class="fas fa-user-plus"></i> Registrarse
+          </button>
+          <button type="submit" class="btn-login">
+            <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+          </button>
+        </div>
+      </form>
+
+      <form (submit)="registrar()" *ngIf="!isLoginMode">
+        <div class="form-group">
+          <label for="regNombre"
+            ><i class="fas fa-id-card"></i> Nombre Completo</label
+          >
+          <input
+            type="text"
+            id="regNombre"
+            [(ngModel)]="registroNombre"
+            name="regNombre"
+            placeholder="Tu nombre"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="regCorreo"
+            ><i class="fas fa-envelope"></i> Correo Electrónico</label
+          >
+          <input
+            type="email"
+            id="regCorreo"
+            [(ngModel)]="registroCorreo"
+            name="regCorreo"
+            placeholder="tu@correo.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="regUsuario"
+            ><i class="fas fa-user-tag"></i> Nombre de Usuario</label
+          >
+          <input
+            type="text"
+            id="regUsuario"
+            [(ngModel)]="registroUsuario"
+            name="regUsuario"
+            placeholder="Crea un usuario"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="regPassword"
+            ><i class="fas fa-lock"></i> Contraseña</label
+          >
+          <input
+            type="password"
+            id="regPassword"
+            [(ngModel)]="registroPassword"
+            name="regPassword"
+            placeholder="Crea una contraseña segura"
+            required
+          />
+        </div>
+
+        <div class="form-actions">
+          <button
+            type="button"
+            class="btn-register"
+            (click)="toggleFormulario()"
+          >
+            <i class="fas fa-arrow-left"></i> Volver
+          </button>
+          <button type="submit" class="btn-login">
+            <i class="fas fa-check"></i> Completar Registro
           </button>
         </div>
       </form>

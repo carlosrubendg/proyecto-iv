@@ -30,9 +30,7 @@
           <span>Total:</span>
           <span class="total-amount">${{ total | number: "1.2-2" }}</span>
         </div>
-        <button class="btn-checkout" (click)="finalizarCompra()">
-          Finalizar Compra
-        </button>
+        <button class="btn-checkout" routerLink="/checkout">Proceder al pago</button>
       </div>
     </div>
   </div>

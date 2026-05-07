@@ -1,0 +1,80 @@
+.checkout-container {
+  padding: 4rem 2rem;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.checkout-glass {
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 204, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+  color: white;
+}
+
+.title { color: #ffcc00; text-align: center; margin-top: 0; }
+.subtitle { text-align: center; color: #ccc; margin-bottom: 2rem; }
+
+.form-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #ffcc00;
+}
+
+.form-section h3 { margin-top: 0; color: #fff; font-size: 1.1rem; }
+.form-section h3 i { color: #ffcc00; margin-right: 8px; }
+
+input {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.8rem;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input::placeholder { color: #888; }
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.full-width { width: 100%; margin-bottom: 1rem; }
+
+.order-summary {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.highlight { color: #25d366; font-size: 1.5rem; }
+
+.btn-primary {
+  background: #ffcc00; color: #111; border: none;
+  padding: 1rem; font-weight: bold; border-radius: 5px;
+  cursor: pointer; transition: all 0.3s ease; font-size: 1.1rem;
+}
+
+.btn-primary:hover { background: #e6b800; transform: translateY(-2px); }
+
+.success-alert {
+  background-color: #25d366; color: white; padding: 1rem;
+  border-radius: 5px; margin-top: 1.5rem; text-align: center;
+  font-weight: bold; animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 768px) { .input-group { grid-template-columns: 1fr; } }

@@ -2,11 +2,19 @@
 
 .auth-container {
   width: 100%;
+  min-height: 80vh; /* Fuerza a que el contenedor ocupe casi toda la altura visible */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrado vertical */
+  align-items: center; /* Centrado horizontal */
+  padding: 4rem 1.5rem; /* 4rem de separación arriba/abajo y 1.5rem a los lados en móviles */
+  box-sizing: border-box;
 }
 
 /* Estilos para la sección de bienvenida del usuario logueado */
 .user-welcome {
   width: 100%;
+  max-width: 500px; /* Evita que la alerta de bienvenida se estire demasiado */
   background-color: transparent;
 }
 

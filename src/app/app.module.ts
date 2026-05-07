@@ -13,11 +13,14 @@ import { ImageGalleryComponent } from './components/image-gallery/image-gallery.
 import { VideoEmbedComponent } from './components/video-embed/video-embed.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'tienda', component: ShopComponent },
-  { path: 'carrito', component: CartComponent }
+  { path: 'auth', component: AuthComponent },
+  { path: 'carrito', component: CartComponent },
+  { path: 'checkout', component: CheckoutComponent }
 ];
 
 @NgModule({
@@ -31,7 +34,8 @@ const routes: Routes = [
     ImageGalleryComponent,
     VideoEmbedComponent,
     ShopComponent,
-    CartComponent
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
