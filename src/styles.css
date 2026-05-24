@@ -19,7 +19,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   /* Corrección de ruta para el despliegue */
-  background-image: url(/assets/celulares.jpg);
+  background-image: url(assets/celulares.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
