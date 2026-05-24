@@ -1,0 +1,28 @@
+<div class="rating-container">
+  <div class="rating-card">
+    <h3>¿Qué te pareció nuestro sitio web?</h3>
+    <p>
+      Tu opinión nos ayuda a mejorar el servicio de Tecnoyorsh.
+    </p>
+
+    <div class="stars-grid" *ngIf="!votado">
+      <i
+        *ngFor="let estrella of [1, 2, 3, 4, 5]"
+        [class]="
+          estrella <= (hoverRating || rating)
+            ? 'fas fa-star active'
+            : 'far fa-star'
+        "
+        (mouseenter)="onMouseEnter(estrella)"
+        (mouseleave)="onMouseLeave()"
+        (click)="seleccionarRating(estrella)"
+      ></i>
+    </div>
+
+    <div *ngIf="votado" class="thank-you-message">
+      <i class="fas fa-heart"></i>
+      <h4>¡Gracias por tu valoración de {{ rating }} {{ rating === 1 ? 'estrella' : 'estrellas' }}!</h4>
+      <p>Se registró con éxito en el sistema.</p>
+    </div>
+  </div>
+</div>

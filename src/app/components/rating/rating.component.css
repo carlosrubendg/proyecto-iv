@@ -1,0 +1,83 @@
+.rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.rating-card {
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 204, 0, 0.15);
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.rating-card h3 {
+  color: #ffcc00;
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.rating-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.stars-grid {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.stars-grid i {
+  font-size: 2.2rem;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.stars-grid i:hover {
+  transform: scale(1.2);
+}
+
+.stars-grid i.active {
+  color: #ffcc00;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+.thank-you-message {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.thank-you-message i {
+  font-size: 2.5rem;
+  color: #ff3b30;
+  margin-bottom: 1rem;
+}
+
+.thank-you-message h4 {
+  color: #25d366;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

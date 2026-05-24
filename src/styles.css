@@ -303,6 +303,11 @@ section {
   transform: translateY(-5px);
 }
 
+/* Sección de preguntas frecuentes */
+.faq-section {
+  padding-bottom: 0;
+}
+
 /* Footer */
 .footer {
   background-color: rgba(0, 0, 0, 1);

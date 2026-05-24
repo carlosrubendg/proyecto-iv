@@ -14,6 +14,7 @@ import { VideoEmbedComponent } from './components/video-embed/video-embed.compon
 import { ShopComponent } from './components/shop/shop.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { RatingComponent } from './components/rating/rating.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,7 +36,8 @@ const routes: Routes = [
     VideoEmbedComponent,
     ShopComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
